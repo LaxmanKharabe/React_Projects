@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Without Defer Example</title>
+    <script defer>
+        // Simulate a long-running script
+        console.log('Script without defer is running');
+        const start = Date.now();
+        console.log(start);
+        while (Date.now() - start < 3000) {
+            // Busy-wait for 3 seconds
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.backgroundColor = 'lightblue';
+        });
+        console.log('Script without defer has finished');
+    </script>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
