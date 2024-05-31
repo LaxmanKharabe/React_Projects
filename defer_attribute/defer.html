@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Without Defer Example</title>
-    <script defer>
-        // Simulate a long-running script
+    
+    <script src="script.js" defer></script>
+    <!-- <script defer>
         console.log('Script without defer is running');
         const start = Date.now();
         console.log(start);
@@ -16,7 +17,7 @@
             document.body.style.backgroundColor = 'lightblue';
         });
         console.log('Script without defer has finished');
-    </script>
+    </script> -->
 </head>
 <body>
     <h1>Hello World</h1>
