@@ -4,7 +4,6 @@ import Component from './Component'
 
 function App() {
   const [price, setPrice] = useState("")
-    
   function handlePrice(){
       setPrice("$100")
   }
