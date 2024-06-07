@@ -10,5 +10,4 @@ const GameOver = ({ winner, onReStart, winnerName }) => {
         </div>
     )
 }
-
 export default GameOver
