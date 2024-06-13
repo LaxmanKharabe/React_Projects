@@ -1,12 +1,11 @@
 import { useRef, useState } from "react";
-export default function Player() {
+
+export default function PlayerExample() {
   const playerName = useRef();
   const [enteredPlayerName, setEnteredPlayedName] = useState(null);
 
   const handleClick = () => {
-    setEnteredPlayedName(playerName.current.value);
-    playerName.current.value = "" // It will clear the input box when clicked on the submit button
-    playerName.current.focus() // when the cleared it will focus the input element
+    setEnteredPlayedName(playerName.current.value)
   }
 
   return (
