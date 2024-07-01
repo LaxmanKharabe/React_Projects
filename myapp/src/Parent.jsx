@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Child from './Child';
 import { useRef } from 'react';
+import { useCallback } from 'react';
 
 const Parent = () => {
     const [inputValue, setInputValue] = useState('');
@@ -18,10 +19,12 @@ const Parent = () => {
         setInputValue('');
     };
 
-    const handleDeleteItem = (item) => {
+    // const handleDeleteItem = (item) => {
+    //     setItems(items.filter(i => i !== item));
+    // };
+    const handleDeleteItem = useCallback((item)=>{
         setItems(items.filter(i => i !== item));
-    };
-
+    },[])
     return (
         <div>
             <input

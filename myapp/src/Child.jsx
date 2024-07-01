@@ -12,5 +12,4 @@ const Child = ({ items, onDeleteItem }) => {
         </ul>
     );
 };
-
 export default Child;
